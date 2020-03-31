@@ -4,6 +4,8 @@ require 'sinatra'
 class Battle < Sinatra::Base
   enable :sessions
 
+  STARTING_HEALTH = 20
+
   get '/' do
     erb(:index)
   end
