@@ -46,6 +46,3 @@ DEPENDENCIES
   capybara
   selenium-webdriver
   sinatra
-
-BUNDLED WITH
-   2.1.4
