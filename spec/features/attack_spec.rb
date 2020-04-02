@@ -1,3 +1,5 @@
+require "spec_helper"
+
 feature 'Attack players' do
   scenario 'gives confirmation of attack' do
     sign_in_and_play

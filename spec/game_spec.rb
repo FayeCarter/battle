@@ -1,7 +1,5 @@
 require 'game'
 
-
-
 describe Game do
   
   # Player instance double
