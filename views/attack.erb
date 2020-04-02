@@ -7,13 +7,6 @@
   <title>Battles</title>
 </head>
 <body>
-  <h1><%= @p1_name %> vs <%= @p2_name %>!</h1>
-  <section>
-    <h2>Player 2 HP: <%= @p2hp %></h2>
-  </section>
-  <form action="/action" method='post'>  
-    <button type="submit" name='action' value="attacked">Attack</button>
-  </form>
-
+  <h1><%= @p1_name %> <%= @message %> <%= @p2_name %>!</h1>
 </body>
 </html>

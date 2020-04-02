@@ -22,7 +22,6 @@ set :session_secret, "New"
     @p1_name = $p1.name
     @p2_name = $p2.name
     @p2hp = $p2.hp
-    @result = session[:result]
     erb :play
   end
 
@@ -30,12 +29,18 @@ set :session_secret, "New"
     @p1 = $p1
     @p2 = $p2
     @game = $game
-
-    session[:result] = params[:action]
-    @p1name = $p1.name
-    @p2name = $p2.name
+    session[:message] = params[:action]
+    @p1_name = $p1.name
+    @p2_name = $p2.name
     @game.attack(@p2)
-    redirect '/play'
+    redirect '/attack'
+  end
+
+  get '/attack' do
+    @p1_name = $p1.name
+    @p2_name = $p2.name
+    @message = session[:message]
+    erb :attack
   end
 
 end
