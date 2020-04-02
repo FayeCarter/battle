@@ -13,16 +13,20 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-ENV['Rack_ENV'] = 'test'
+
+ENV['RACK_ENV'] = 'test'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'features/web_helpers'
+
+Capybara.app = Battles
 
 
-Capybara.app = Battle
+
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -108,7 +112,4 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-
-
 end
-
